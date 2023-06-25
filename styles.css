@@ -5,7 +5,7 @@ body{
     background-color: black;
     color: #fff3fa;
     font-family: 'Poppins';
-    background:url('textures/stars3.jpeg');
+    background:url('public/static/images/stars2.jpeg');
     background-size: cover;
 }
 .text{
