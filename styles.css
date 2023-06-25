@@ -2,6 +2,7 @@
 body{
     margin: 0;
     overflow-x: hidden;
+    overflow: hidden;
     background-color: black;
     color: #fff3fa;
     font-family: 'Poppins';
@@ -16,7 +17,7 @@ body{
     padding: 40vh 0;
     background-color: black;
     z-index: 3;
-    transition: 1;
+    transition: 2s;
     overflow: hidden;
 }
 .text{
