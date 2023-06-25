@@ -1,6 +1,4 @@
 import * as THREE from 'three'
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
-
 
 //Sizes
 const sizes = {
@@ -8,7 +6,7 @@ const sizes = {
     width: window.innerWidth
 }
 //Load Textures
-const texture = new THREE.TextureLoader().load('textures/earth.png')
+const texture = new THREE.TextureLoader().load('public/static/textures/earth.png')
 
 //Scene
 const scene = new THREE.Scene()
