@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import {} from '/static/images/earth.png'
 //Sizes
-const sizes = {
+var sizes = {
     height: window.innerHeight,
     width: window.innerWidth
 }
@@ -18,6 +18,7 @@ const texture = new THREE.TextureLoader(loader).load('/static/images/earth.png')
 
 loader.onLoad = ()=>{
 //loading.style.transform="translate(0,-" + window.innerHeight + "px)";
+loading.style.visibility= 'hidden'
 loading.style.opacity = 0;
 body.style.overflowY = 'scroll'
 //Scene
@@ -51,7 +52,7 @@ scene.add(camera)
 const canvas = document.querySelector(".webgl")
 const renderer = new THREE.WebGLRenderer({canvas})
 renderer.antialias = true
-renderer.setClearAlpha()
+renderer.setClearAlpha(0)
 renderer.setSize(sizes.width,sizes.height)
 renderer.render(scene,camera)
 renderer.outputColorSpace = THREE.SRGBColorSpace; 
@@ -61,7 +62,6 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 window.addEventListener("resize",()=>{
     sizes.height = window.innerHeight
     sizes.width = window.innerWidth
-
     camera.aspect = (sizes.width/sizes.height)
     camera.updateProjectionMatrix()
     renderer.setSize(sizes.width, sizes.height)

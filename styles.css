@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Poppins:wght@200&display=swap');
+html { min-height:100%; min-width:100%; }
 body{
     margin: 0;
     overflow-x: hidden;
     overflow: hidden;
-    background-color: black;
     color: #fff3fa;
     font-family: 'Poppins';
-    background:url('/static/images/stars3.jpeg');
-    background-size: cover;
+    background-image:url('/static/images/stars3.jpeg');
+    background-size: contain;
+}
+.preloader{
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
 }
 .loading{
     position: absolute;
     width: 100vw;
-    height: 20vh;
+    height: 60vh;
     text-align: center;
-    padding: 40vh 0;
+    padding: 20vh 0;
     background-color: black;
     z-index: 3;
-    transition: 2s;
+    transition: 1s;
     overflow: hidden;
 }
 .text{
@@ -42,10 +47,24 @@ p{
     font-size: 1.5rem;
 }
 .content-intro{
-    width: 100vw;
-    padding: 10vh;
+    width: 90vw;
+    padding: 10vh 5vw;
 }
 .content-intro p{
     font-size: 1.2rem;
-    width: 30vw;
+}
+@media screen and (max-width:600px){
+    h1{
+        font-size: 7rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    .preloader{
+        width: 200px;
+        height: 200px;
+    }
 }
