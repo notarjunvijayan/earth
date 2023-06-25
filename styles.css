@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Poppins:wght@200&display=swap');
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: black;
+    color: #fff3fa;
+    font-family: 'Poppins';
+    background:url('textures/stars3.jpeg');
+    background-size: cover;
+}
+.text{
+    position: absolute;
+    width: 100vw;
+    height: 75vh;
+    color: antiquewhite;
+    text-align: center;
+    margin-top:25vh;
+    mix-blend-mode: difference;
+}
+h1{
+    font-family: 'Oswald';
+    font-size: 15rem;
+    margin: 0%;
+}
+h2{
+    font-family: 'Oswald';
+    font-size: 7rem;
+}
+p{
+    font-size: 1.5rem;
+}
+.content-intro{
+    width: 100vw;
+    padding: 10vh;
+}
+.content-intro p{
+    font-size: 1.2rem;
+    width: 30vw;
+}
