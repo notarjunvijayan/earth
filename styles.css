@@ -11,11 +11,13 @@ body{
 .loading{
     position: absolute;
     width: 100vw;
-    height: 60vh;
+    height: 100vh;
     text-align: center;
-    padding-top: 40vh;
+    padding: 40vh 0;
     background-color: black;
     z-index: 3;
+    transition: 1;
+    overflow: hidden;
 }
 .text{
     position: absolute;

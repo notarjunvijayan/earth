@@ -12,13 +12,14 @@ var body = document.querySelector('body')
 loader.onProgress = ()=>{
     console.log('loading')
     loading.style.visibility = 'visible'
-    body.overflow = 'hidden'
+    body.style.overflow = 'hidden'
 }
 
 const texture = new THREE.TextureLoader(loader).load('/static/images/earth.png')
 
 loader.onLoad = ()=>{
 loading.style.visibility = 'hidden'
+body.style.overflowY = 'scroll'
 //Scene
 const scene = new THREE.Scene()
 //Create Sphere
