@@ -6,7 +6,7 @@ const sizes = {
     width: window.innerWidth
 }
 //Load Textures
-const texture = new THREE.TextureLoader().load('public/static/images/earth.png')
+const texture = new THREE.TextureLoader().load('/static/images/earth.png')
 
 //Scene
 const scene = new THREE.Scene()
