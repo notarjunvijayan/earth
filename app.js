@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-
+import {} from '/static/images/earth.png'
 //Sizes
 const sizes = {
     height: window.innerHeight,
