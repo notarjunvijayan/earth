@@ -6,8 +6,19 @@ const sizes = {
     width: window.innerWidth
 }
 //Load Textures
-const texture = new THREE.TextureLoader().load('/static/images/earth.png')
+const loader = new THREE.LoadingManager
+var loading = document.querySelector('.loading')
+var body = document.querySelector('body')
+loader.onProgress = ()=>{
+    console.log('loading')
+    loading.style.visibility = 'visible'
+    body.overflow = 'hidden'
+}
 
+const texture = new THREE.TextureLoader(loader).load('/static/images/earth.png')
+
+loader.onLoad = ()=>{
+loading.style.visibility = 'hidden'
 //Scene
 const scene = new THREE.Scene()
 //Create Sphere
@@ -62,8 +73,10 @@ const loop=()=>{
     if(camera.position.z > 8){
         camera.position.z -= 0.0095
     }
-    console.log(camera.position)
     renderer.render(scene,camera);
     window.requestAnimationFrame(loop)
 }
 loop()
+}
+
+
